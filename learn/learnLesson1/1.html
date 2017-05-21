@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--<script src="../pixi4.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.5.1/pixi.min.js"></script>
+</head>
+<body>
+<script src="../overJS/common.js"></script>
+<script>
+
+    var stage;
+    stage = new PIXI.Container();//这应该是内容
+    var renderer;
+    renderer = PIXI.autoDetectRenderer(256, 256,
+        //antialias反锯齿开关   resolution设置不同分辨率比率一般就是1，transparent是否使背景变得透明
+        {antialias: false, transparent: false, resolution: 1}
+    );//这应该是画布
+    renderer.backgroundColor = 0x000039;//设置画布颜色
+    renderer.view.style.border = "1px dashed black";//像操作dom一样操作dom
+    renderer.autoResize = true;//开启调节画布大小
+    renderer.resize(512, 512);//调节大小到。。
+    document.body.appendChild(renderer.view);//renderer.view 是一个canvasedom对象可以像操作其他dom一样操作他
+
+
+    //加载资源到变量（但是一般不这么用）
+    //  var texture= PIXI.utils.TextureCache["images/cat.png"];
+    //生成一个元素精灵
+    //var sprite= new PIXI.Sprite(texture);
+    PIXI.loader.add([
+        "./examples/images/cat.png",
+        "./examples/images/dungeon.png",
+        "./examples/images/tileset.png"
+    ]).on("progress", loadProgressHandler)//自定义资源加载通知
+        .load(setup);
+
+    var ff = {
+        res: function (url) {
+            return PIXI.loader.resources[url].texture;
+        }
+    };
+
+    function loadProgressHandler(loader, resource) {
+        //Display the file `url` currently being loaded
+        console.log("loading: " + resource.url);
+        //Display the precentage of files currently loaded
+        console.log("progress: " + loader.progress + "%");
+        //If you gave your files names as the first argument
+        //of the `add` method, you can access them like this
+        //console.log("loading: " + resource.name);
+    }
+    function setup() {
+        var sprite = new PIXI.Sprite(
+            ff.res("./examples/images/cat.png")
+            //使用已经缓存好的图片
+        );
+        sprite.texture = TextureCache['./examples/images/dungeon.png'];//改变元素精灵的贴图
+        sprite.texture = TextureCache['./examples/images/cat.png'];
+        //改变元素精灵的位置
+        sprite.x=80;
+        sprite.y=100;
+        //改变元素精灵位置简写
+        var x=100,y=100;
+        sprite.position.set(x, y);
+        //改变元素精灵大小
+        sprite.width=300;
+        sprite.height=300;
+//改变元素精灵缩放比例会依据原始比例缩放
+        sprite.scale.set(0.5,0.5);
+        //使元素精灵旋转
+        var pi=Math.PI;
+sprite.rotation= 1.5*pi;
+//设置元素精灵的旋转中心点在自身的某个位置(0-1)
+//        sprite.anchor.set(0.5, 0.5);
+//设置元素精灵的中心点以自身原点的位置(0-xxxxxxpx);
+        sprite.pivot.set(16, 16);
+console.log([sprite.width,sprite.height]);
+        stage.addChild(sprite);
+//    stage.removeChild(sprite);
+
+        //Create the `tileset` sprite from the texture
+        var texture = TextureCache["./examples/images/tileset.png"];
+
+        //Create a rectangle object that defines the position and
+        //size of the sub-image you want to extract from the texture
+        var rectangle = new Rectangle(192, 128, 64, 64);
+
+        //Tell the texture to use that rectangular section
+        texture.frame = rectangle;
+
+        //Create the sprite from the texture
+        var rocket = new Sprite(texture);
+
+        //Position the rocket sprite on the canvas
+        rocket.x = 32;
+        rocket.y = 32;
+
+        //Add the rocket to the stage
+        stage.addChild(rocket);
+
+
+
+
+
+
+        renderer.render(stage);//渲染内容
+
+    }
+
+
+</script>
+</body>
+</html>
