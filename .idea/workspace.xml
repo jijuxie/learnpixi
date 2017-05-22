@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1d1b82f-4c06-4e3f-a03b-c805547695d4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/learn/learnLesson1/img/sprites.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/learn/learnLesson1/img/sprites.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/pixi.iml" afterPath="$PROJECT_DIR$/.idea/pixi.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/learn/learnLesson1/1.html" afterPath="$PROJECT_DIR$/learn/learnLesson1/1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/learn/learnLesson1/examples/17_treasureHunter.html" afterPath="$PROJECT_DIR$/learn/learnLesson1/examples/17_treasureHunter.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/learn/overJS/common.js" afterPath="$PROJECT_DIR$/learn/overJS/common.js" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
@@ -48,11 +46,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="1.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="1.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/learn/learnLesson1/1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="171" column="34" selection-start-line="171" selection-start-column="34" selection-end-line="171" selection-end-column="34" />
+            <state relative-caret-position="144">
+              <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="92" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="17_treasureHunter.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/learn/learnLesson1/examples/17_treasureHunter.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="16_collisionDetection.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/learn/learnLesson1/examples/16_collisionDetection.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="172">
+              <caret line="157" column="0" selection-start-line="157" selection-start-column="0" selection-end-line="206" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -81,8 +99,8 @@
       <file leaf-file-name="common.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/learn/overJS/common.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="36" column="9" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
+            <state relative-caret-position="254">
+              <caret line="74" column="7" selection-start-line="74" selection-start-column="7" selection-end-line="74" selection-end-column="7" />
               <folding>
                 <element signature="e#0#41#0" expanded="false" />
               </folding>
@@ -114,9 +132,10 @@
         <option value="$PROJECT_DIR$/learn/pixi4.js" />
         <option value="$PROJECT_DIR$/learn/learnLesson1/examples/07_spriteFromTileset.html" />
         <option value="$PROJECT_DIR$/learn/learnLesson1/img/sprites.json" />
+        <option value="$PROJECT_DIR$/../../../sprites.css" />
         <option value="$PROJECT_DIR$/learn/overJS/common.js" />
         <option value="$PROJECT_DIR$/learn/learnLesson1/1.html" />
-        <option value="$PROJECT_DIR$/../../../sprites.css" />
+        <option value="$PROJECT_DIR$/learn/learnLesson1/examples/17_treasureHunter.html" />
       </list>
     </option>
   </component>
@@ -128,8 +147,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-289" />
-    <option name="y" value="451" />
+    <option name="x" value="-322" />
+    <option name="y" value="178" />
     <option name="width" value="1932" />
     <option name="height" value="827" />
   </component>
@@ -232,6 +251,42 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="learnpixi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="learnpixi" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="learn" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="learnLesson1" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="examples" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="learnpixi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="learnpixi" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="demo" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -315,15 +370,15 @@
       <workItem from="1495284036780" duration="10145000" />
       <workItem from="1495336410320" duration="254000" />
       <workItem from="1495337670278" duration="1691000" />
-      <workItem from="1495365398783" duration="5098000" />
+      <workItem from="1495365398783" duration="8648000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27075000" />
+    <option name="totallyTimeSpent" value="30625000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-289" y="451" width="1932" height="827" extended-state="1" />
+    <frame x="-322" y="178" width="1932" height="827" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24947807" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -622,16 +677,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/learn/overJS/common.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="36" column="9" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../sprites.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
@@ -640,10 +685,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/learn/learnLesson1/examples/16_collisionDetection.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="157" column="0" selection-start-line="157" selection-start-column="0" selection-end-line="206" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/learn/overJS/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="74" column="7" selection-start-line="74" selection-start-column="7" selection-end-line="74" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/learn/learnLesson1/1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="171" column="34" selection-start-line="171" selection-start-column="34" selection-end-line="171" selection-end-column="34" />
+        <state relative-caret-position="144">
+          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="92" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/learn/learnLesson1/examples/17_treasureHunter.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>

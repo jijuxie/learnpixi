@@ -133,10 +133,71 @@ left.press=function () {
 
 
 
+//生成图形
+        var rectangle = new Graphics();//创建形状基类
+        rectangle.lineStyle(4, 0xFF3300, 1);//线宽 4像素，颜色xxx 透明度1
+        rectangle.beginFill(0x66CCFF);//填充色
+        rectangle.drawRect(0, 0, 64, 64);//绘制矩形左边距，上边距，宽，高
+//        drawCircle(x, y, radius)//绘制圆形，中心点的x值，中心点的y值，半径
+        //drawEllipse（x，y，width，height）;绘制椭圆形，x,y定义椭圆的矩形外边界的左上角位置，，宽，高
+//        drawRoundedRect（x，y，width，height，cornerRadius）；绘制圆角矩形，前面的是举行的参数,后面的的是圆角的参数
+        rectangle.endFill();//结束绘制
+        rectangle.x = 170;
+        rectangle.y = 170;
+        stage.addChild(rectangle);
+//使用行绘制图形
+        //绘制一条线
+        var line = new Graphics();
+        line.lineStyle(4, 0xFFFFFF, 1);
+        line.moveTo(0, 0);//起点
+        line.lineTo(300, 300);//划线
+        line.x = 32;
+        line.y = 32;
+        stage.addChild(line);
+
+//绘制多边形
+        var triangle = new Graphics();
+        triangle.beginFill(0x66FF33);
+
+//Use `drawPolygon` to define the triangle as
+//a path array of x/y positions
+//点点相连，最后一个点和起点相连
+        triangle.drawPolygon([
+            -32, 64,             //First point
+            32, 64,              //Second point
+            0, 0                 //Third point
+        ]);
+
+//Fill shape's color
+        triangle.endFill();
+
+//Position the triangle after you've drawn it.
+//The triangle's x/y position is anchored to its first point in the path
+        triangle.x = 180;
+        triangle.y = 22;
+
+        stage.addChild(triangle);
 
 
 
 
+
+
+
+
+
+//绘制文字
+        var message = new Text(
+                "Hello Pixi!",
+                {fontFamily: "Arial", fontSize: 32, fill: "white",wordWrap: true, wordWrapWidth: 100, align: "center"}
+        );
+
+        message.position.set(54, 96);
+        stage.addChild(message);
+        //这个应该放到循环函数里去
+        if(hitTestRectangle(message,sprite2)){
+            alert(1);
+        }
 
 //定制运动函数，为计算的每帧动一下动到什么程度
         function gameLoop() {
@@ -169,9 +230,9 @@ sprite2.x+=sprite2.vx;
 //    tiger.toLocal(tiger.position, hedgehog).y
 
 
-    这是比PIXI.Container()更加高效率的元素精灵块
+//    这是比PIXI.Container()更加高效率的元素精灵块但是功能比他少
 //    var superFastSprites =  new  ParticleContainer（
-//    size，
+//    size，//容器可以容纳的最大精灵数量
 //    {
 //        rotation ： true，
 //    alpha ： true，
