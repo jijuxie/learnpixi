@@ -31,7 +31,8 @@
     PIXI.loader.add([
         "./examples/images/cat.png",
         "./examples/images/dungeon.png",
-        "./examples/images/tileset.png"
+        "./examples/images/tileset.png",
+            "./img/sprites.json"
     ]).on("progress", loadProgressHandler)//自定义资源加载通知
         .load(setup);
 
@@ -99,14 +100,87 @@ console.log([sprite.width,sprite.height]);
         //Add the rocket to the stage
         stage.addChild(rocket);
 
+//加载雪碧图中的单个图片
+        var sprite2 = new Sprite(
+                resources["./img/sprites.json"].textures["111.png"]
+        );
+
+        stage.addChild(sprite2);
+
+
+
+
+        var left = keyboard(37),
+                up = keyboard(38),
+                right = keyboard(39),
+                down = keyboard(40);
+        sprite2.vx = 0;
+        sprite2.vy = 0;
+//        按下事件
+left.press=function () {
+    sprite2.vx=1;
+};
+//抬起事件
+        left.release = function() {
+
+            //If the left arrow has been released, and the right arrow isn't down,
+            //and the cat isn't moving vertically:
+            //Stop the cat
+            if (!right.isDown && sprite2.vy === 0) {
+                sprite2.vx=0;
+            }
+        };
 
 
 
 
 
-        renderer.render(stage);//渲染内容
+
+
+
+//定制运动函数，为计算的每帧动一下动到什么程度
+        function gameLoop() {
+            //设置元素精灵对象属性
+//sprite2.x++;
+sprite2.x+=sprite2.vx;
+            //Loop this function at 60 frames per second
+            requestAnimationFrame(gameLoop);//多次循环本方法
+
+            //Move the cat 1 pixel to the right each frame
+//            cat.x += 1;
+
+            //Render the stage to see the animation
+            renderer.render(stage);
+        }
+
+//Start the game loop
+        gameLoop();
+
+//        renderer.render(stage);//渲染内容（渲染一次，）
 
     }
+//stage本身可以当做一个元素精灵，可以添加到其他场景中去
+//    stage作为精灵元素时会有相对位置和外层位置
+    //可以通过一下方法获取外层位置
+//    tiger.getGlobalPosition().x
+//    tiger.getGlobalPosition().y
+    //判断两个精灵元素的相对位置（可以用来判断碰撞）
+//    tiger.toLocal(tiger.position, hedgehog).x
+//    tiger.toLocal(tiger.position, hedgehog).y
+
+
+    这是比PIXI.Container()更加高效率的元素精灵块
+//    var superFastSprites =  new  ParticleContainer（
+//    size，
+//    {
+//        rotation ： true，
+//    alpha ： true，
+//    scale ： true，
+//    uvs ： true
+//    }
+//    ）;
+    //更加效率的方法是stage = new PIXI.Container();//这应该是内容
+
 
 
 </script>

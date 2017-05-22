@@ -1,0 +1,20 @@
+{
+  "frames": {
+    "111.png": {
+      "frame": {"x":0, "y":0, "w":1024, "h":660},
+      "spriteSourceSize": {"x":0,"y":0,"w":1024,"h":660},
+      "sourceSize": {"w":1024,"h":660}
+    },
+    "222.png": {
+      "frame": {"x":0, "y":661, "w":221, "h":288},
+      "spriteSourceSize": {"x":89,"y":56,"w":400,"h":400},
+      "sourceSize": {"w":400,"h":400}
+    }
+
+  },
+  "meta": {
+    "image": "sprites.png",
+    "size": {"w": 1025, "h": 950},
+    "scale": "1"
+  }
+}
